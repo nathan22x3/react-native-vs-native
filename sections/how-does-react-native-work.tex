@@ -1,0 +1,17 @@
+In a React Native app, its JavaScript code runs in a dedicated thread, while the rest of the app runs in what we’ll
+call ``the native realm''.
+JavaScript controls the application's business logic, while the native realm renders the UI and oversees device
+interactions.
+To communicate, these two realms rely on something known as ``the Bridge''.
+
+The JavaScript thread and the native realm cannot communicate directly - they are unable to listen to, reply to, or
+cancel events and actions occurring on the other side.
+Instead, they use asynchronous message queues to send serialized messages back and forth.
+The gap is ``bridged'' using this system.
+
+Some performance concerns may develop as a result of the detached and asynchronous nature of this mode of
+communication.
+Queues can become congested if the user is rapidly scrolling through a big and complex list, for example — numerous
+``user has scrolled'' and ``render this new UI'' updates fly back and forth.
+Animations can likewise be a source of concern for the same reason.
+In actuality, most of the time, these types of performance flaws are insignificant to the user.

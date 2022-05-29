@@ -1,0 +1,34 @@
+\usepackage{xcolor}
+\input{colors.tex}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={const, typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do,
+  else, case, break, class, export, boolean, throw, implements, import, this},
+  sensitive=true,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstdefinestyle{gruvbox}{
+  backgroundcolor=\color{gruvboxBackground},
+  basicstyle=\color{gruvboxForeground}\ttfamily\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  commentstyle=\color{gruvboxGray},
+  identifierstyle=\color{gruvboxPurple},
+  keepspaces=false,
+  keywordstyle=\color{gruvboxRed},
+  numbers=left,
+  numbersep=5pt,
+  numberstyle =\color{gruvboxPurple}\tiny\ttfamily,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  stringstyle=\color{gruvboxGreen},
+  tabsize=2
+}
+
+\lstset{style=gruvbox}

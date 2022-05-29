@@ -1,0 +1,43 @@
+%! Author = Nathan Nguyen
+
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{subfiles}
+
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0em}
+
+\graphicspath{{./images/}}
+
+\begin{document}
+
+  \begin{center}
+    \huge{\uppercase{React Native vs Native}}
+  \end{center}
+
+  \tableofcontents
+  \pagebreak
+
+
+  \section{Comparing React Native vs Traditional Native Apps}
+  \input{sections/comparing-react-native-and-native-apps.tex}
+
+
+  \section{How Does React Native Work?}
+  \input{sections/how-does-react-native-work.tex}
+
+
+  \section{Native vs React Native}
+  \subfile{sections/react-native-vs-native.tex}
+
+
+  \section{Picking and Choosing}
+  \input{sections/picking-and-choosing.tex}
+
+
+%  \href{https://www.scalablepath.com/react-native/react-native-vs-native}{React Native vs Native for Mobile App Development}
+
+%  https://appinventiv.com/blog/react-native-vs-native-apps/
+
+\end{document}
